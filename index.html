@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="browser-mongo.v2.js"></script>
+    <script>
+        var db1 = new BrowserMongo();
+        var db2 = new BrowserMongo();
+
+        db1.addName('Test1');
+        db2.addName('Test2');
+
+        console.log(db1 === db2);
+        db2.getNames();
+    </script>
+</body>
+</html>
